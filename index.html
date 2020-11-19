@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title >Logcat</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link style="border-radius: 100%;" href= "data:image/png;base64,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" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link  href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Day - v2.1.0
+  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="icofont-phone"></i> +91 95265 52062
+      </div>
+      <div class="social-links">
+        <a href="https://instagram.com/log_cat__tec?igshid=4q84xoov6lvf" class="instagram"><i class="icofont-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+      <img src="Logcat logo.jpg" width="60em" height="45em" style="margin-left: 0em;" >
+      <h1 style="margin-left: 1em;" class="logo mr-auto"><a href="index.html"><span>l</span>ogcat</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">We follow</a></li>
+          <li><a href="#contact">Contact </a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Welcome to Logcat</h1>
+      <h2>We are the team with lots of talent in developing the things you want in the cyberspace</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+            <h1>About Us</h1>
+            <br><br>
+            <p class="font-italic">
+              Our company is a mobile app development company established in 2020. We focused  on developing eye catching mobile apps and websites. 
+            </p>
+            <br>
+            <p>
+              We offers a wide range of customized services in mobile apps, website development . Our team and our product will bring growth to your business. We target on delivering the service without compromsing on time and quality of the product.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <h2 class="text-center">Trusted by</h2>
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row d-flex align-items-center">
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Services</span>
+          <h2>Services</h2>
+          <p>We do the better services according to your valuable concerns</p>
+        </div>
+
+        <div class="row">
+          <div class=" col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><img src="https://img.icons8.com/dusk/64/000000/web.png"/></div>
+              <h4><a href="">Website development</a></h4>
+              <p>We would create stunning websites at the lower cost for your business.</p>
+            </div>
+          </div>
+
+          <div class=" col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+            <div class="icon-box">
+              <div class="icon"><img src="https://img.icons8.com/dusk/64/000000/android.png"/></div>
+              <h4><a href="">Android app development</a></h4>
+              <p>We build android app in native platforms for greater user experience and performance.</p>
+            </div>
+          </div>
+
+          <div class=" col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><img src="https://img.icons8.com/color/64/000000/flutter.png"/></div>
+              <h4><a href="">Flutter app development</a></h4>
+              <p>We build high performance app in different platforms with single code.</p>
+            </div>
+          </div>
+
+          <div class=" col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
+            <div class="icon-box">
+              <div class="icon"><img src="https://img.icons8.com/ios-filled/50/000000/adobe-logo.png"/></i></div>
+              <h4><a href="">Designing</a></h4>
+              <p>We kindly focusing on cool and user friendly designs for users to interact with it. </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="process" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="align-items-center">
+          <h1 class="text-white ">Process we follow</h1><br><br>
+          <ul style="font-size: larger;" class="text-white">
+            <li>Requirement Collecting</li><br>
+            <li>UI/UX Design</li><br>
+            <li>Prototype</li><br>
+            <li>App development</li><br>
+            <li>Quality Assurance</li><br>
+            <li>Deployment</li><br>
+            <li>Help and Maintanence</li><br>
+          </ul>
+          <a class="cta-btn" href="#contact">Call To Action</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact US</span>
+          <h2>Contact US</h2>
+          <p>Swing by for a cup of coffee,or leave us a message</p>
+        </div>
+
+        <div class="row "data-aos="fade-up">
+      
+          <div class="col-12 col-md-6 ">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+91 95265 52062</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style=" width: 143em;" class="row" data-aos="fade-up">
+
+          
+
+          <div class="col-lg-6">
+            <form action="" method="post" role="form" class="">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" name="subject" id="subject" placeholder="Your Phone no." data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class=" col-md-12"><button style="width: 20%;" class="btn btn-danger" type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div style="margin-left: 3em;" class="col-lg-4 col-md-6 ">
+            <div class="footer-info">
+              <h3>Logcat</h3>
+              <p>
+                <strong>Phone:</strong>+91 95265 52062<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://instagram.com/log_cat__tec?igshid=4q84xoov6lvf" class="instagram"><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+          <img style="width: 24em; height: 16em; margin-left: 6em;" src="Logcat logo.jpg" width="60em" height="45em" style="margin-left: 0em;" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Logcat</span></strong>. All Rights were Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        Designed by Logcat
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
